@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="#" method="POST">
+    <div class="input-group mb-3">
+        <span class="input-group-text" style="width:32%;">Sender Address</span>
+        <input type="text" class="form-control" name="sender">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" style="width:32%;">Receiver Address</span>
+        <input type="text" class="form-control" name="recipient">
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" style="width:32%;">Amount</span>
+        <input type="number" class="form-control" name="amount">
+    </div>
+</form>
+{% endblock %}
