@@ -16,7 +16,7 @@
   * Short: Blokchain Network
 * Purpose
 
-  * Program jest odpowiedzialny za zarządzanie łańcuchem. Będzie przechowywać transakcje i mieć kilka metod pomocniczych do dodawania nowych bloków do łańcucha.
+  * Program is responsible for simple blockchain creation and transactions.
 * Main features
 
   * Creates a new block in the network
@@ -29,7 +29,7 @@
 
 * PYTHON
 
-  * Librariers
+  * Libraries
     * json
     * hashlib
     * time
@@ -64,7 +64,7 @@ For the first instance on port 4001:
 FLASK_APP=blockchain.py flask run --port 4001
 ```
 
-If you want to user other port just run with other number 
+If you want to user other port just run with other number at the end.
 
 Program will be running on port 4001. Now run line in your browser:
 
@@ -92,7 +92,7 @@ If you want to check the current network, press the "Show" button. Each block co
 
 ## Limitations
 
-The current version mainly presents the operation of the blockchain network, where, among others, creating a transaction, mining a block and displaying the current network
+The current version mainly presents the operation of the blockchain network, where, among others, creating a transaction, mining a block and displaying the current network.
 
 ## Planned features but not implemented
 
@@ -102,7 +102,6 @@ The current version mainly presents the operation of the blockchain network, whe
     * User account with encryption
     * View history of transactions
     * View prices of choosen coins
-    * 
   * Admin
     * Site managment
 
@@ -113,4 +112,4 @@ The current version mainly presents the operation of the blockchain network, whe
   * [Maciej Stasiłowicz](https://github.com/PilgrimMatthias)
   * Natalia Szarszewska
 * License
-  * This program is licensed under CC BY 4.0. To view a copy of this license, visit[ https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+  * This program is licensed under CC BY 4.0. To view a copy of this license go to:[ https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)

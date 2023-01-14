@@ -197,7 +197,7 @@ blockchain = Blockchain()
 
 @app.route("/mine", methods=["GET"])
 def mine():
-    # Prproof of work algorithm to get the next proof...
+    # Proof of work algorithm to get the next proof.
     last_block = blockchain.last_block
     proof = blockchain.proof_of_work(last_block)
 
