@@ -3,7 +3,6 @@ import json
 from time import time
 from urllib.parse import urlparse
 from uuid import uuid4
-
 import requests
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 from datetime import datetime
@@ -21,7 +20,7 @@ class Blockchain:
     def register_node(self, address):
         """
         Add a new node to the list of nodes
-        :param address: Address of node. Eg. 'http://192.168.0.5:5000'
+        :param address: Address of node.
         """
 
         parsed_url = urlparse(address)
@@ -66,8 +65,8 @@ class Blockchain:
 
     def resolve_conflicts(self):
         """
-        This is our consensus algorithm, it resolves conflicts
-        by replacing our chain with the longest one in the network.
+        Consensus algorithm, which resolves conflicts
+        by replacing chain with the longest one in the network.
         :return: True if our chain was replaced, False if not
         """
 
@@ -198,11 +197,11 @@ blockchain = Blockchain()
 
 @app.route("/mine", methods=["GET"])
 def mine():
-    # We run the proof of work algorithm to get the next proof...
+    # Prproof of work algorithm to get the next proof...
     last_block = blockchain.last_block
     proof = blockchain.proof_of_work(last_block)
 
-    # We must receive a reward for finding the proof.
+    # User must be given reward for findeing a proof.
     # The sender is "0" to signify that this node has mined a new coin.
     blockchain.new_transaction(
         sender="0",
@@ -296,13 +295,11 @@ def consensus():
     return jsonify(response), 200
 
 
-# Appending html file to flask app
 @app.route("/")
 def index():
     return render_template("base.html")
 
 
-# Filter for timestamp
 @app.template_filter("timestamp_to_date")
 def timestamp_to_date(timestamp):
     return datetime.fromtimestamp(timestamp)
