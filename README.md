@@ -28,7 +28,7 @@
 ## Technologies
 
 * PYTHON
-
+ 
   * Libraries
     * json
     * hashlib
